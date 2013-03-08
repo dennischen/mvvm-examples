@@ -1,0 +1,12 @@
+<zk>
+	<window title="Confirm" border="normal" mode="modal" width="300px" 
+		apply="simple.confirmdlg.Case2ConfirmDlgCtrl">
+		<hbox style="padding:10px 4px" >
+			<label value="${arg.message}"/>
+		</hbox>
+		<hbox style="padding:10px 4px" >
+			<button label="Yes" id="yesBtn"/>
+			<button label="No" id="noBtn"/>
+		</hbox>
+	</window>
+</zk>

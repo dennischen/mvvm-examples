@@ -1,0 +1,24 @@
+<zk>
+	<window title="Confirm" border="normal" mode="modal" width="300px"
+		apply="org.zkoss.bind.BindComposer" viewModel="@id('vm') @init(util)"
+		visible="@bind(not empty vm.confirmMessage)">
+		<hbox style="padding:10px 4px">
+			<label value="@bind(vm.confirmMessage)" />
+		</hbox>
+		<hbox style="padding:10px 4px">
+			<button label="Yes" onClick="@command('confirm')" />
+			<button label="No" onClick="@command('clearConfirmMessage')" />
+		</hbox>
+	</window>
+
+	<window title="Message" border="normal" mode="modal" width="300px"
+		apply="org.zkoss.bind.BindComposer" viewModel="@id('vm') @init(util)"
+		visible="@bind(not empty vm.message)">
+		<hbox style="padding:10px 4px">
+			<label value="@bind(vm.message)" />
+		</hbox>
+		<hbox style="padding:10px 4px">
+			<button label="close" onClick="@command('clearMessage')" />
+		</hbox>
+	</window>
+</zk>

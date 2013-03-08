@@ -1,0 +1,11 @@
+<zk>
+	<window title="Message" border="normal" mode="modal" width="300px" 
+		apply="simple.messagebox.Case2MessageDlgCtrl">
+		<hbox style="padding:10px 4px" >
+			<label value="${arg.message}"/>
+		</hbox>
+		<hbox style="padding:10px 4px" >
+			<button label="close" id="closeBtn"/>
+		</hbox>
+	</window>
+</zk>

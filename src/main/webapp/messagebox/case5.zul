@@ -1,0 +1,16 @@
+<zk>
+	<label multiline="true">
+	1.use Messagebox.show() to show a notification message
+	
+	</label>
+	<window apply="org.zkoss.bind.BindComposer"
+		viewModel="@id('vm') @init('simple.messagebox.Case5VM')">
+		<hbox>
+			<textbox value="@bind(vm.name)" />
+			<label value="@bind(vm.name)" />
+		</hbox>
+		<hbox>
+			<button label="register" onClick="@command('register')" />
+		</hbox>
+	</window>
+</zk>

@@ -1,0 +1,26 @@
+<zk>
+	<label multiline="true">
+		1.use visible to show message
+
+	</label>
+	<window apply="org.zkoss.bind.BindComposer"
+		viewModel="@id('vm') @init('simple.messagebox.Case3VM')">
+		<hbox>
+			<textbox value="@bind(vm.name)" />
+			<label value="@bind(vm.name)" />
+		</hbox>
+		<hbox>
+			<button label="register" onClick="@command('register')" />
+		</hbox>
+
+		<window title="Message" border="normal" mode="modal"
+			width="300px" visible="@bind(not empty vm.message)">
+			<hbox style="padding:10px 4px">
+				<label value="@bind(vm.message)" />
+			</hbox>
+			<hbox style="padding:10px 4px">
+				<button label="close" onClick="@command('clearMessage')" />
+			</hbox>
+		</window>
+	</window>
+</zk>

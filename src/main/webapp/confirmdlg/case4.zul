@@ -1,0 +1,18 @@
+<zk>
+	<label multiline="true">
+		1.use visible to show message
+
+	</label>
+	<window apply="org.zkoss.bind.BindComposer"
+		viewModel="@id('vm') @init('simple.confirmdlg.Case4VM')">
+		<hbox>
+			<textbox value="@load(vm.name) @save(vm.name,before='register')" constraint="no empty" />
+			<label value="@bind(vm.name)" />
+		</hbox>
+		<hbox>
+			<button label="register" onClick="@command('register')" />
+		</hbox>
+
+		<include util="@ref(vm.util)" src="@load('/confirmdlg/case4ConfirmDlg.zul')"/>
+	</window>
+</zk>
