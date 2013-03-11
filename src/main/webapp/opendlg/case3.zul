@@ -1,0 +1,14 @@
+<zk>
+	<label multiline="true">
+	
+	
+	</label>
+	<window apply="org.zkoss.bind.BindComposer" viewModel="@id('vm') @init('simple.opendlg.Case1VM')">
+		<hbox>
+			<label value="@bind(vm.value)"/>
+		</hbox>
+		<hbox>
+			<button label="open" onClick="@command('open',createUri='/opendlg/case2Dlg.zul',param1=vm.value)" />
+		</hbox>
+	</window>
+</zk>

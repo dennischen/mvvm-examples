@@ -1,0 +1,19 @@
+<zk>
+	<label multiline="true">
+	
+	
+	</label>
+	<window apply="org.zkoss.bind.BindComposer"
+		viewModel="@id('vm') @init('simple.confirmdlg.Case7VM')">
+		<hbox>
+			<textbox value="@load(vm.name) @save(vm.name,before='register')" constraint="no empty" />
+			<label value="@bind(vm.name)" />
+		</hbox>
+		<hbox>
+			<button label="register" onClick="@command('register')" />
+			<button label="register-need confirm" onClick="@command('register',confirmMessage=vm.confirmRegisterMessage)" />
+			<!--  -->
+			<button label="register-need confirm" onClick="@command('register',confirmHandler=somewhere)" />
+		</hbox>
+	</window>
+</zk>

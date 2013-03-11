@@ -21,9 +21,9 @@ public class Case2VM {
 
 	@Command
 	public void register() {
-		Map args = new HashMap();
-		args.put("message", "Thanks for registering, "+name);
-		Executions.createComponents("/messagebox/case2MessageDlg.zul", null, args);
+		Map arg = new HashMap();
+		arg.put("message", "Thanks for registering, "+name);
+		Executions.createComponents("/messagebox/case2MessageDlg.zul", null, arg);
 	}
 
 }
