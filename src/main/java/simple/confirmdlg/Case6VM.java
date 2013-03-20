@@ -1,6 +1,7 @@
 package simple.confirmdlg;
 
 import org.zkoss.bind.Binder;
+import org.zkoss.bind.Validator;
 import org.zkoss.bind.annotation.BindingParam;
 import org.zkoss.bind.annotation.Command;
 import org.zkoss.bind.annotation.ContextParam;
@@ -19,6 +20,10 @@ public class Case6VM {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	public Validator getConfirmableValidator(){
+		return new Case6ConfirmableValidator();
 	}
 
 	@Command

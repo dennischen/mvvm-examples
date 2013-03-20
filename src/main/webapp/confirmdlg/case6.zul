@@ -1,3 +1,4 @@
+<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c"?>
 <zk>
 	<label multiline="true">
 	
@@ -6,7 +7,8 @@
 	<window apply="org.zkoss.bind.BindComposer"
 		viewModel="@id('vm') @init('simple.confirmdlg.Case6VM')">
 		<hbox>
-			<textbox value="@load(vm.name) @save(vm.name,before='register') @validator('simple.confirmdlg.Case6ConfirmableValidator')" constraint="no empty" />
+			<textbox id="tb" value="@load(vm.name) @save(vm.name,before='register') 
+			@validator(vm.confirmableValidator,message=c:cat('Do you really want to register to ',tb.value))" constraint="no empty" />
 			<label value="@bind(vm.name)" />
 		</hbox>
 		<hbox>
